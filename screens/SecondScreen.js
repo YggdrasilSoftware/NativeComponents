@@ -1,10 +1,21 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { StackActions } from '@react-navigation/native';
+import CustomView from './CustomView';
+import React, { Component } from 'react';
 
-export default function SecondScreen({ navigation, route }) {
+
+
+export default function SecondScreen({ navigation, route, Props, State}) {
+
   
+
   return (
     <View style={styles.container}>
+
+      <CustomView 
+          style={{ width: 100, height: 100 }} 
+        />
+
       <Text>Second Screen</Text>
       <Button 
         title='Go to Third Screen'

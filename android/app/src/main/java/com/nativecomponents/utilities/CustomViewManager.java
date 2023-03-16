@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class CustomViewManager extends SimpleViewManager<CustomView> {
 
-    public static final String REACT_CLASS = "RCTMyCustomView";
+    public static final String REACT_CLASS = "RCTCustomView";
 
     @Override
     public String getName() { return REACT_CLASS; }
