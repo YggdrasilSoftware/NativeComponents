@@ -14,6 +14,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.Arguments;
 public class CalendarModule extends ReactContextBaseJavaModule {
+    private int eventCount = 0;
     CalendarModule(ReactApplicationContext context) {
         super(context);
     }
@@ -31,6 +32,8 @@ public class CalendarModule extends ReactContextBaseJavaModule {
     public  void createCalendarPromise(Promise promise) {
         try{
             promise.resolve("Data Returned from Promise");
+            eventCount +=1;
+            sendEvent(getReactApplicationContext(),"EventCount", eventCount);
         }catch (Exception e)
         {
             promise.reject("Error returned from promise",e);

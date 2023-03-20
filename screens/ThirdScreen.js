@@ -1,10 +1,24 @@
-import { StyleSheet, Text, View, Button, NativeModules } from 'react-native';
+import { useEffect } from 'react';
+import { StyleSheet, Text, View, Button, NativeModules, EventEmitter, NativeEventEmitter } from 'react-native';
 const {CalendarModule} = NativeModules;
-console.log(CalendarModule);
-CalendarModule.createCalendarEvent(res => console.log(res));
+// console.log(CalendarModule);
+// CalendarModule.createCalendarEvent(res => console.log(res));
+
+const eventEmitter = new NativeEventEmitter(CalendarModule);
 
 export default function ThirdScreen({ navigation, props }) {
+  useEffect(() => {
+    eventEmitter.addListener ('EventCount', eventCount=> {
+      console.log(eventCount);
+    });
+
+    return () => {
+      eventEmitter.removeAllListeners();
+    };
+
+  }, []);
   const createCalendarEventPromise = async ()=> {
+
     try{
       var result = await CalendarModule.createCalendarPromise();
       console.log(result);
