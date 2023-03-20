@@ -21,7 +21,7 @@ export default function App() {
           options={{title: "Welcome"}}
         />
         <Stack.Screen 
-          name="Second"
+          name="Secondd"
           component={SecondScreen}
         />
         <Stack.Screen 
