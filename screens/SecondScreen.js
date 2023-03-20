@@ -6,14 +6,12 @@ import React, { Component } from 'react';
 
 
 export default function SecondScreen({ navigation, route, Props, State}) {
-
   
-
   return (
     <View style={styles.container}>
 
       <CustomView 
-          style={{ width: 100, height: 100 }} 
+          style={{ width: 300, height: 500 }} 
         />
 
       <Text>Second Screen</Text>
