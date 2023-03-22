@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 
 
-export default function SecondScreenios({ navigation, route, Props, State}) {
+export default function SecondScreen({ navigation, route, Props, State}) {
   
   return (
     <View style={styles.container}>
@@ -17,7 +17,7 @@ export default function SecondScreenios({ navigation, route, Props, State}) {
       <Text>Second Screen</Text>
       <Button 
         title='Go to Third Screen'
-        onPress={() => navigation.navigate("Third")}
+        onPress={() => navigation.navigate("Thirdios")}
       />
     </View>
   );
