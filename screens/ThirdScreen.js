@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { StyleSheet, Text, View, Button, NativeModules, EventEmitter, NativeEventEmitter } from 'react-native';
 const {CalendarModule} = NativeModules;
-// console.log(CalendarModule);
-// CalendarModule.createCalendarEvent(res => console.log(res));
 
 const eventEmitter = new NativeEventEmitter(CalendarModule);
 
