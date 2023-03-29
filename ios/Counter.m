@@ -1,20 +1,11 @@
-//
-//  Counter.m
-//  NativeComponents
-//
-//  Created by Necdet Salih Burgul on 29.03.2023.
-//
+#import <Foundation/Foundation.h>
 
-#import "Counter.h"
+#import "React/RCTBridgeModule.h"
+#import "React/RCTEventEmitter.h"
 
-@implementation Counter
+@interface RCT_EXTERN_MODULE(Counter,RCTEventEmitter)
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+RCT_EXTERN_METHOD(increment:(RCTResponseSenderBlock)callback)
+RCT_EXTERN_METHOD(decrement:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
 @end

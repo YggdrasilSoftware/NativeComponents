@@ -2,11 +2,15 @@ import React, {useEffect} from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import {NativeModules, NativeEventEmitter} from 'react-native';
 
-
+// console.log(NativeModules.Counter);
+// NativeModules.Counter.increment(value => {
+//   console.log('the count is ' + value);
+// });
+// console.log(NativeModules.Counter.getConstants());
 
 const CounterEvents = new NativeEventEmitter(NativeModules.Counter);
 
-const  ThirdScreenios = props => {
+const ThirdScreenios = props => {
   useEffect(() => {
     CounterEvents.addListener('onIncrement', result =>
       console.log('onIncrement received', result),
@@ -34,7 +38,7 @@ const  ThirdScreenios = props => {
 
   return (
     <View style={styles.container}>
-      <Text>Count</Text>
+      <Text>App</Text>
       <Button title="Increase Count" onPress={increment} />
 
       <Button title="Decrease Count" onPress={decrement} />
