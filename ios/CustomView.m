@@ -1,13 +1,13 @@
 //
-//  Counter.m
+//  CustomView.m
 //  NativeComponents
 //
 //  Created by Necdet Salih Burgul on 29.03.2023.
 //
 
-#import "Counter.h"
+#import "CustomView.h"
 
-@implementation Counter
+@implementation CustomView
 
 /*
 // Only override drawRect: if you perform custom drawing.
