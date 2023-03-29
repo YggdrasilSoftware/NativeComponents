@@ -1,9 +1,7 @@
-import UIKit
-
 import Foundation
 
-@objc(CustomView)
-class CustomView: RCTEventEmitter{
+@objc(Counter)
+class Counter: RCTEventEmitter{
   
   private var count = 0;
   
